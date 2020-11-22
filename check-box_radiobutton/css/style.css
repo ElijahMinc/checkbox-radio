@@ -1,0 +1,176 @@
+body,html{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+*{
+	box-sizing: border-box;
+}
+.wrapper {
+	min-height: 100%;
+	width: 100%;
+}
+.container {
+	width: 500px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 30px 30px;
+}
+.form__item {
+}
+.checkbox {
+	padding: 20px 0;
+}
+.checkbox-item {
+		padding: 10px 80px;
+		position: relative;
+		color: silver;
+		cursor:pointer;
+		transition: all 0.4s ease;
+
+}
+.checkbox-item.active {
+		padding: 10px 80px;
+		position: relative;
+		color: black;
+		cursor:pointer;
+
+		transition: all 0.4s ease;
+}
+.checkbox-item:after{
+	content: ' ';
+	position: absolute;
+	top: 5px;
+	left: 10px;
+
+	border-radius: 25px;
+
+	width: 50px;
+	height: 30px;
+
+	background-color: silver;
+
+	transition: all 0.4s ease;
+
+
+}
+.checkbox-item:before{
+	content: ' ';
+	position: absolute;
+	top: 10px;
+	left: 15px;
+
+	border-radius: 25px;
+
+	width: 25px;
+	height: 20px;
+
+	background-color: blue;
+	transition: all 0.4s ease;
+	z-index: 1;
+}
+.checkbox-item.active:before{
+	content: ' ';
+	position: absolute;
+	top: 10px;
+	left: 30px;
+
+	border-radius: 25px;
+
+	width: 25px;
+	height: 20px;
+
+	background-color: blue;
+	z-index: 1;
+	transition: all 0.4s ease;
+}
+
+
+
+.checkbox-item input{
+	display: none;
+}
+.radiobutton {}
+.radiobutton-item{
+	padding: 10px 80px;
+	position: relative;
+	color: silver;
+
+	cursor: pointer;
+
+}
+.radiobutton-item input{
+	display: none;
+}
+
+.radiobutton-item:after{
+
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 15px;
+
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+
+
+	background-color: silver;
+	z-index: 1;
+}
+.radiobutton-item:before{
+
+	content: '';
+	position: absolute;
+	top: 7px;
+	left: 21px;
+
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+
+
+	background-color: blue;
+	z-index: 2;
+
+	transform: scale(0);
+
+	transition: all 0.4s ease;
+}
+.radiobutton-item.active:before{
+
+/*	content: '';
+	position: absolute;
+	top: 7px;
+	left: 21px;
+
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+
+
+	background-color: blue;
+	z-index: 2;*/
+
+	transform: scale(1);
+
+	transition: all 0.4s ease;
+}
+.radiobutton-item.active{
+	color: #000;
+}
+
+.button{
+	margin: 15px 20px;
+	padding: 10px 40px;
+	color: white;
+	border-radius: 25px;
+
+	background-color: rgba(30, 158, 118, 1);
+
+	outline: none;
+
+	border: none;
+
+	box-shadow: 0 0 3px rgba(0,0, 0, 1);
+}
