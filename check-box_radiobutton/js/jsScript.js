@@ -9,16 +9,9 @@ function cicle(e) {
 		return element
 	}
 }
-// inputs.forEach((e) => {
 
-// 	if (e.checked) {
 
-// 		e.closest('.checkbox').classList.add('active')
-
-// 	}
-// })
-
-// АКТИВНОСТЬ ДЛЯ Чекбоксов ///////////////////////////
+// АКТИВНОСТЬ ДЛЯ Чекбоксов 
 function checkbox() {
 	var checkbox = cicle(checkboxs)
 	var getChildCheck = checkbox.querySelector('input')
@@ -28,13 +21,7 @@ function checkbox() {
 	}
 }
 checkbox()
-// for (let i = 0; i < checkboxs.length; i++) {
-// 	var checkbox = checkboxs[i]
-// 	var getChildCheck = checkbox.querySelector('input')
-// 	if (getChildCheck.checked) {
-// 		checkbox.classList.add('active')
-// 	}
-// }
+
 
 // АКТИВНОСТЬ ДЛЯ РАДИО-КНОПОК //
 function radio() {
@@ -46,50 +33,7 @@ function radio() {
 	}
 }
 radio()
-// for (let i = 0; i < radiobuts.length; i++) {
-// 	var radio = radiobuts[i]
-// 	var getChildCheck = radio.querySelector('input')
-// 	if (getChildCheck.checked) {
-// 		radio.classList.add('active')
-// 	}
-// }
 
-
-
-
-// for (let i = 0; i < inputs.length; i++) {
-// 	let input = inputs[i]
-// 	let inputActive = input.checked
-// 	let parentCheckbox = input.closest('.checkbox')
-// 	let parentButton = input.closest('.radiobuttons__item')
-
-// 	if () {
-// 		parentCheckbox.classList.add('active')
-// 	}
-
-// }
-
-// active Checkbox
-// for (let input of inputs) {
-// 	if (input.checked) {
-// 		input.closest('.checkbox').classList.add('active')
-// 	}
-// }
-
-// АКТИВНОСТЬ 
-
-
-// for (let i = 0; i > inputs.length; i++) {
-// 	const input = inputs[i];
-// 	const parentChek = input.closest('.checkbox')
-// 	const parentButton = input.closest('.radiobuttons__item')
-
-
-// 	if (input.checked) {
-// 		parentChek.classList.add('active')
-// 		parentButton.classList.add('active')
-// 	}
-// }
 
 // ЧЕК-БОКС 
 checkboxs.forEach((e) => {
@@ -125,15 +69,59 @@ radiobuts.forEach((e) => {
 			e.classList.add('active')
 			child.setAttribute('checked', '')
 
-			// function clearClass() {
-			// 	next: for (let i = 0; i < radiobuts.length; i++) {
-			// 		var element = radiobuts[i]
-			// 		if (element.classList.contains('active')) {
-			// 			continue next;
-			// 		}
-			// 	}
-			// }
-			// clearClass()
+
 		}
 	})
 })
+
+//          JQUERY
+// $(document).ready(function(){
+
+// 	$.each($('.checkbox'), function(index,val) {
+
+// 		if($(this).find('input').prop('checked')==true){
+// 			$(this).addClass('active');
+// 		}
+
+// 	});
+
+// 		$(document).on('click', ' .checkbox', function(event) {
+// 		if($(this).hasClass('active')){
+
+// 			$(this).find('input').prop('checked', false);
+
+// 		} else{
+
+// 			$(this).find('input').prop('checked', true);
+
+// 		}
+
+// 		$(this).toggleClass('active');
+
+
+
+
+// 		return false;
+// 	});
+
+
+
+
+// 	$.each($('.radiobuttons__item'), function(index,val) {
+// 		if($(this).find('input').prop('checked')==true){
+// 			$(this).addClass('active');
+// 		}
+// 	});
+// 	$(document).on('click', ' .radiobuttons__item', function(event) {
+// 		$(this).parents('.radiobuttons').find('.radiobuttons__item').removeClass('active');
+// 		$(this).parents('.radiobuttons').find('.radiobuttons__item input').prop('checked', false);
+
+
+// 		 $(this).addClass('active');
+// 		  $(this).find('input').prop('checked', true);
+
+
+
+// 		return false;
+// 	});
+// });
